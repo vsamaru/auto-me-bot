@@ -22,19 +22,19 @@ jobs:
           node-version: '16'
           cache: npm
 
-      - name: Setup Python 3.10
-        uses: actions/setup-python@v4.3.0
-        with:
-          python-version: "3.10"
+      # - name: Setup Python 3.10
+      #   uses: actions/setup-python@v4.3.0
+      #   with:
+      #     python-version: "3.10"
 
-      - name: Cache pip repository
-        uses: actions/cache@v3
-        with:
-          path: ~/.cache/pip
-          key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
+      # - name: Cache pip repository
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.cache/pip
+      #     key: ${{ runner.os }}-pip-${{ hashFiles('requirements.txt') }}
 
-      - name: Prepare python environment
-        run: pip install -r requirements.txt
+      # - name: Prepare python environment
+      #   run: pip install -r requirements.txt
 
       - name: Build site
         run: mkdocs build
