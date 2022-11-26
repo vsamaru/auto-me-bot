@@ -4,7 +4,7 @@ name: Pull request build
 on:
   pull_request:
     branches:
-      - main
+      - master
 
 jobs:
   test:
