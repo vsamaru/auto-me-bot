@@ -37,7 +37,7 @@ jobs:
           git config user.name "${{ github.actor }}"
           git config user.email "${{ github.actor }}@users.noreply.github.com"
 
-      - name: Deploy to GH Pages
-        run: |
-          git pull origin ${{ github.event.repository.default_branch }}
-          mkdocs gh-deploy -m 'docs: deployed to gh-pages for ${{ github.ref }}'
+#       - name: Deploy to GH Pages
+#         run: |
+#           git pull origin ${{ github.event.repository.default_branch }}
+#           docs gh-deploy -m 'docs: deployed to gh-pages for ${{ github.ref }}'
